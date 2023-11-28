@@ -6,12 +6,7 @@ import java.util.NoSuchElementException;
 public class MyArrayList<T> {
     public static void main(String[] args) {
         MyArrayList<Integer> arrayList = new MyArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            arrayList.addElement(i);
-        }
-        System.out.println(arrayList);
-        arrayList.addElement(1, 4);
-        System.out.println(arrayList);
+
     }
 
     private T[] list;
@@ -59,6 +54,22 @@ public class MyArrayList<T> {
             throw new NoSuchElementException("Element not found");
         }
         deleteElementByIndex(pos);
+    }
+
+    public T get(int index) {
+        if (index >= 0 && index < list.length) {
+            return list[index];
+        } else {
+            throw new ArrayIndexOutOfBoundsException("The index goes outside the array");
+        }
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    public int size() {
+        return size;
     }
 
     public void printDisplay() {
