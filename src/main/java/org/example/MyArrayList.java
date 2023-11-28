@@ -4,10 +4,6 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 public class MyArrayList<T> {
-    public static void main(String[] args) {
-        MyArrayList<Integer> arrayList = new MyArrayList<>();
-
-    }
 
     private T[] list;
     private int size;
